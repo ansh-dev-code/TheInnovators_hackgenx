@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Budget Allocation</title>
+  <style>
+   
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>AI Budget Allocation</h1>
+    <div class="input-group">
+      <input type="number" id="income" placeholder="Monthly Income">
+    </div>
+    <div class="input-group">
+      <input type="number" id="rent" placeholder="Rent">
+    </div>
+    <div class="input-group">
+      <input type="number" id="food" placeholder="Food">
+    </div>
+    <div class="input-group">
+      <input type="number" id="utilities" placeholder="Utilities">
+    </div>
+    <button class="btn" onclick="getSuggestion()">Get AI Suggestion</button>
+
+    <div id="result" class="suggestion-box" style="display: none;">
+      <h2>Suggested Allocation:</h2>
+      <div id="allocation"></div>
+      <div class="progress-bar">
+        <div id="progress" class="progress-fill" style="width: 0%"></div>
+      </div>
+      <div class="savings" id="savingsText"></div>
+    </div>
+  </div>
+
+  <script>
+    function getSuggestion() {
+      const income = parseInt(document.getElementById("income").value) || 0;
+      const rent = parseInt(document.getElementById("rent").value) || 0;
+      const food = parseInt(document.getElementById("food").value) || 0;
+      const utilities = parseInt(document.getElementById("utilities").value) || 0;
+
+      const totalExpenses = rent + food + utilities;
+      const remaining = income - totalExpenses;
+      const savings = remaining > 0 ? remaining : 0;
+
+      const suggestion = {
+        rent: Math.round(income * 0.25),
+        food: Math.round(income * 0.2),
+        utilities: Math.round(income * 0.15),
+        savings: Math.round(income * 0.2),
+        misc: Math.round(income * 0.2)
+      };
+
+      const allocationDiv = document.getElementById("allocation");
+      allocationDiv.innerHTML = "";
+
+      for (const key in suggestion) {
+        const item = document.createElement("div");
+        item.className = "suggestion-item";
+        item.innerHTML = <span>${key.charAt(0).toUpperCase() + key.slice(1)}</span><span>₹${suggestion[key]}</span>;
+        allocationDiv.appendChild(item);
+      }
+
+      document.getElementById("result").style.display = "block";
+      const percent = income > 0 ? (savings / income) * 100 : 0;
+      document.getElementById("progress").style.width = percent + "%";
+      document.getElementById("savingsText").innerText = Savings: ₹${savings};
+    }
+  </script>
+</body>
+</html>
