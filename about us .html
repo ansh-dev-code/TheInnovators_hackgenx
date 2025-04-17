@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us - AI Budget Allocation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #5f7699, #00c6ff);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      font-weight: 600;
+    }
+
+    header p {
+      margin: 1rem 0 0;
+      font-size: 1.3rem;
+    }
+
+    .about-section {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 2rem 2rem 3rem;
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-section img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      margin-bottom: 2rem;
+    }
+
+    .about-section p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .more-text {
+      display: none;
+      animation: fadeIn 0.4s ease-in-out;
+      margin-top: 1rem;
+    }
+
+    .read-more {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .read-more-btn {
+      background: #0d47a1;
+      color: white;
+      padding: 0.7rem 1.4rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .read-more-btn:hover {
+      background: #08306b;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .about-section {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>About Us</h1>
+    <p>AI-Powered Budget Allocation System</p>
+  </header>
+
+  <section class="about-section">
+    
+    <img src="budget 1.jpg" alt="AI Budget Allocation System" />
+
+    <p>
+      Our AI-based budget allocation system is designed to revolutionize how individuals and businesses manage their finances.
+      <span class="more-text" id="moreText">
+        It leverages intelligent algorithms to analyze spending habits, identify areas of inefficiency, and provide real-time personalized recommendations. The system not only helps users allocate budgets wisely but also forecasts future financial trends using machine learning.
+        <br><br>
+        With a focus on automation, simplicity, and clarity, our goal is to empower people to take control of their money with the help of AI.
+      </span>
+    </p>
+
+    <div class="read-more">
+      <button class="read-more-btn" onclick="toggleReadMore()">Read More</button>
+    </div>
+  </section>
+
+  <script>
+    function toggleReadMore() {
+      const moreText = document.getElementById("moreText");
+      const btn = document.querySelector(".read-more-btn");
+      if (moreText.style.display === "inline") {
+        moreText.style.display = "none";
+        btn.textContent = "Read More";
+      } else {
+        moreText.style.display = "inline";
+        btn.textContent = "Read Less";
+      }
+    }
+  </script>
+  <li class="nav-item">
+    <a class="nav-link" href="landingpage2.html"><i class="fas fa-home me-1"></i>Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="signlogin.html"><i class="fas fa-book-open me-1"></i>About Us</a>
+  </li>
+
+</body>
+</html>

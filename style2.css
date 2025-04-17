@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #1a1a6f, #5b2c9c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  .form-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .toggle-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .toggle-buttons button {
+    flex: 1;
+    padding: 10px;
+    background: #eee;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 12px 12px 0 0;
+    transition: background 0.3s;
+  }
+  
+  .toggle-buttons .active {
+    background: #5b2c9c;
+    color: #fff;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form input {
+    margin: 10px 0;
+    padding: 12px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .form input:focus {
+    border-color: #5b2c9c;
+    outline: none;
+    box-shadow: 0 0 5px rgba(91, 44, 156, 0.5);
+  }
+  
+  .extras {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .extras a {
+    font-size: 0.9rem;
+    color: #5b2c9c;
+    text-decoration: none;
+  }
+  
+  .submit-btn {
+    background: #5b2c9c;
+    color: #fff;
+    padding: 14px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background: #452173;
+  }
+  
+  .toggle-text {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .toggle-text a {
+    color: #5b2c9c;
+    text-decoration: none;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  .navbar {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right, #0d47a1, #00c6ff);
+    list-style: none;
+    padding: 1rem 0;
+    margin: 0;
+  }
+  
+  .navbar li {
+    margin: 0 2rem;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    color: #ffd700;
+  }

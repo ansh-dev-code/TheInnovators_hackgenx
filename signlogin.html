@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login / Signup Form</title>
+  <link rel="stylesheet" href="style2.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="form-box">
+      <div class="toggle-buttons">
+        <button id="loginBtn" class="active">Login</button>
+        <button id="signupBtn">Signup</button>
+      </div>
+
+      
+      <form id="loginForm" class="form">
+        <h2>Login</h2>
+        <input type="email" placeholder="Email Address" id="loginEmail" required />
+        <input type="password" placeholder="Password" id="loginPassword" required />
+        <div class="extras">
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="submit-btn">Login</button>
+        <p class="toggle-text">Not a member? <a href="#" id="showSignup">Signup now</a></p>
+      </form>
+
+      
+      <form id="signupForm" class="form hidden">
+        <h2>Signup</h2>
+        <input type="email" placeholder="Email Address" id="signupEmail" required />
+        <input type="password" placeholder="Password" id="signupPassword" required />
+        <input type="password" placeholder="Confirm Password" id="confirmPassword" required />
+        <button type="submit" class="submit-btn">Signup</button>
+      </form>
+      <li class="nav-item">
+        <a class="nav-link" href="landingpage2.html"><i class="fas fa-home me-1"></i>Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about us .html"><i class="fas fa-book-open me-1"></i>About Us</a>
+      </li>
+    </div>
+  </div>
+  <script src="script2.js"></script>
+</body>
+</html>
